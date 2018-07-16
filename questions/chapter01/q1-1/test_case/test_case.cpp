@@ -2,9 +2,9 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-TEST_CASE( "Factorials are computed", "[factorial]" ) {
-    REQUIRE( Answer(1) == 1 );
-    REQUIRE( Answer(2) == 2 );
-    REQUIRE( Answer(3) == 6 );
-    REQUIRE( Answer(10) == 3628800 );
+TEST_CASE( "Coding unit test", "[Function]" ) {
+    REQUIRE( Answer("abcdef") == true );
+    REQUIRE( Answer("hello") == false );
+    REQUIRE( Answer("q12we34rt5") == true );
+    REQUIRE( Answer("abcde1231") == false );
 }

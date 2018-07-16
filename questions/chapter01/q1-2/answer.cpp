@@ -1,3 +1,5 @@
-unsigned int Answer(unsigned int number){
-  return number <= 1 ? number : Answer(number-1)*number;
+using namespace std;
+
+bool CheckPermutation(string s1, string s2){
+  return true;
 }
