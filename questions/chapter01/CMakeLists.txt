@@ -17,7 +17,7 @@ target_include_directories( ${PROJECT_NAME}
   q1-1/solution
 )
 
-add_test (
-  NAME ${PROJECT_NAME}
-  COMMAND ${PROJECT_NAME} -o report.xml -r compact
+add_custom_target ( ${PROJECT_NAME}_test
+  COMMAND ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME} -r console
+  DEPENDS ${PROJECT_NAME}
 )
