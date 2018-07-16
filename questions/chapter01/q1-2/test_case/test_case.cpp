@@ -2,7 +2,7 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-TEST_CASE( "Factorials are computed", "[factorial]" ) {
+TEST_CASE( "2Factorials are computed", "[factorial]" ) {
     REQUIRE( Answer(1) == 1 );
     REQUIRE( Answer(2) == 2 );
     REQUIRE( Answer(3) == 6 );
