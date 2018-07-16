@@ -3,5 +3,27 @@
 #include "../answer.cpp"
 
 TEST_CASE( "Coding unit test", "[Question04]" ) {
-    REQUIRE( Answer("Tact Coa") == true);
+  REQUIRE( Answer("tact coa") == true);
+  REQUIRE( Answer("t a c t c o a") == true);
+  REQUIRE( Answer("Tact Oa") == true);
+  REQUIRE( Answer("Tact Coa") == true);
+  REQUIRE( Answer("tacatca") == true);
+  REQUIRE( Answer("hello") == false);
+  REQUIRE( Answer("Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa") == true);
+
+  REQUIRE( Answer("Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coact Coa") == false);
 }
