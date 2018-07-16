@@ -2,7 +2,7 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-TEST_CASE( "Check Permutation", "[Permutation]" ) {
+TEST_CASE( "Coding unit test", "[Question02]" ) {
     REQUIRE( CheckPermutation("hello", "hello") ==  true);
     REQUIRE( CheckPermutation("hello", "wilson") == false );
     REQUIRE( CheckPermutation("hello123", "hello321") == true );

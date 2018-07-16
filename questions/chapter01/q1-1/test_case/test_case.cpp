@@ -2,7 +2,7 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-TEST_CASE( "Coding unit test", "[Function]" ) {
+TEST_CASE( "Coding unit test", "[Question01]" ) {
     REQUIRE( Answer("abcdef") == true );
     REQUIRE( Answer("hello") == false );
     REQUIRE( Answer("q12we34rt5") == true );
