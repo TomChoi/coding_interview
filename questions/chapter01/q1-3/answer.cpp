@@ -9,5 +9,16 @@ using namespace std;
 // Output: "Mr%20John%20Smith"
 
 string Answer(string s1, int len){
-  return "";
+
+  char space = ' ';
+  string result = "";
+
+  for (size_t i = 0; i < len; i++) {
+    if (s1[i] == space) {
+      result += "%20";
+    } else {
+      result += s1[i];
+    }
+  }
+  return result;
 }
