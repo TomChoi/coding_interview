@@ -15,5 +15,5 @@ TEST_CASE( "Coding unit test", "[Question08]" ) {
                      0,0,0
                      7,0,9}
 
-  REQUIRE( Answer(v1) == v1_sol);
+  REQUIRE( Answer(v1, 3, 3) == v1_sol);
 }
