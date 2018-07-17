@@ -7,10 +7,11 @@ using namespace std;
 
 string Answer(string s1){
   string res;
+  int j = 0;
   for(int i=0; i<s1.size();){
     int same_count = 0;
     res += s1[i];
-    for(int j=i; j<s1.size(); j++){
+    for( j=i; j<s1.size(); j++){
       if( s1[i] == s1[j] ){
         same_count++;
         i = j;
@@ -20,8 +21,9 @@ string Answer(string s1){
       }
     }
     res += to_string(same_count);
-    if( i == s1.size() -1 )
+    if( j == s1.size() ){
       break;
+    }
   }
   return res;
 }
