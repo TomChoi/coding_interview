@@ -12,9 +12,9 @@ TEST_CASE( "Coding unit test", "[Question04]" ) {
   REQUIRE( Answer("Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
   Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
   Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
-  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa
-  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa
-  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa
-  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa
-  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa") == false);
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa \
+  Tact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact CoaTact Coa") == true);
 }
