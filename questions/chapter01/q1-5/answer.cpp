@@ -10,5 +10,52 @@ using namespace std;
 // pale, bake -> false
 
 bool Answer(string s1, string s2){
-  return true;
+  int type = s1.size() - s2.size();
+  if( type == 0 ){
+    // replace
+    int diff_count = 0;
+    for( int k=0; k < s1.size(); k++){
+      if( s1[k] != s2[k] ){
+        diff_count++;
+      }
+    }
+    if( diff_count <= 1){
+      return true;
+    }
+  } else if( type == 1 ){
+    for( int i=0; i < s1.size(); i++ ){
+      int r_index = 0;
+      for( int k=0; k < s1.size(); k++ ){
+
+        if( k != i ){
+          if( s1[k] != s2[r_index]){
+            break;
+          }
+          r_index++;
+        }
+        if( k == s1.size() -1 ){
+          return true;
+        }
+      }
+    }
+  } else if ( type == -1){
+    for( int i=0; i < s2.size(); i++ ){
+      int l_index = 0;
+      for( int k=0; k < s2.size(); k++ ){
+
+        if( k != i ){
+          if( s1[l_index] != s2[k]){
+            break;
+          }
+          l_index++;
+        }
+        if( k == s2.size() -1 ){
+          return true;
+        }
+      }
+    }
+  }else{
+    return false;
+  }
+  return false;
 }
