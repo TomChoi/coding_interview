@@ -2,6 +2,6 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
+TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
 
 }

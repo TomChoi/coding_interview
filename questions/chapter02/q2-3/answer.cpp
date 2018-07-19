@@ -2,13 +2,12 @@
 
 using namespace std;
 
-// URLify: Write a method to replace all spaces in a string with '%20'. You may assume that the string
-// has sufficient space at the end to hold the additional characters, and that you are given the "true"
-// length of the string. (Note: If implementing in Java, please use a character array so that you can
-// perform this operation in place.)
+// Delete Middle Node: Implement an algorithm to delete a node in the middle
+// (i.e., any node but the  rst and last node, not necessarily the exact middle)
+// of a singly linked list, given only access to that node.
 // EXAMPLE
-// Input: "Mr John Smith ", 13
-// Output: "Mr%20John%20Smith"
+// lnput:the node c from the linked lista->b->c->d->e->f
+// Result: nothing is returned, but the new linked list looks likea->b->d->e- >f
 
 string Answer(string s1, int len){
   string res;

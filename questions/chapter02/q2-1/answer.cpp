@@ -2,10 +2,12 @@
 
 using namespace std;
 
-// Is Unique: Implement an algorithm to determine if a string has all unique characters. What if you
-// cannot use additional data structures?
+// Remov Dups! Write code to remove duplicates from an unsorted linked list.
+// FOLLOW UP
+// How would you solve this problem if a temporary bu er is not allowed?
+// Hints: #9, #40
 
 bool Answer(string s1){
-  
+
   return true;
 }
