@@ -5,5 +5,5 @@
 TEST_CASE( "Coding unit test", "[Question06]" ) {
     REQUIRE( Answer("aabcccccaaa") == "a2b1c5a3");
     REQUIRE( Answer("aaaaaa") == "a6");
-    REQUIRE( Answer("abcdef") == "a1b1c1d1e1f1");
+    REQUIRE( Answer("abcdef") == "abcdef");
 }
