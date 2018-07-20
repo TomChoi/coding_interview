@@ -3,48 +3,25 @@
 #include "../answer.cpp"
 
 TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
-  SECTION("int"){
-    LinkedList<int> input;
+  SECTION("number"){
+    LinkedList<char> input;
     input.appendNode(9);
     input.appendNode(3);
     input.appendNode(4);
     input.appendNode(3);
     input.appendNode(1);
 
-    LinkedList<int> res;
+    LinkedList<char> res;
     res.appendNode(9);
     res.appendNode(3);
     res.appendNode(4);
     res.appendNode(1);
 
-    input.Answer();
-
-    REQUIRE( input == res );
+    REQUIRE( RemoveDups(input) == res );
   }
 
-  SECTION("float"){
-    LinkedList<float> input;
-    input.appendNode(9.33);
-    input.appendNode(3.123);
-    input.appendNode(4.11);
-    input.appendNode(4.21);
-    input.appendNode(3.123);
-    input.appendNode(2.99);
-
-    LinkedList<float> res;
-    res.appendNode(9.33);
-    res.appendNode(3.123);
-    res.appendNode(4.11);
-    res.appendNode(4.21);
-    res.appendNode(2.99);
-
-    input.Answer();
-
-    REQUIRE( input == res );
-  }
-
-  SECTION("char"){
-    LinkedList<float> input;
+  SECTION("charactor"){
+    LinkedList<char> input;
     input.appendNode('c');
     input.appendNode('v');
     input.appendNode('a');
@@ -57,14 +34,12 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
     input.appendNode('c');
     input.appendNode('c');
 
-    LinkedList<float> res;
+    LinkedList<char> res;
     res.appendNode('c');
     res.appendNode('a');
     res.appendNode('v');
 
-    input.Answer();
-
-    REQUIRE( input == res );
+    REQUIRE( RemoveDups(input) == res );
   }
 
   SECTION("mix"){
@@ -98,9 +73,7 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
     res.appendNode(4);
     res.appendNode(' ');
 
-    input.Answer();
-
-    REQUIRE( input == res );
+    REQUIRE( RemoveDups(input) == res );
   }
 
 }

@@ -74,9 +74,9 @@ public:
       currentNode->next = newNode;
     }
   }
-
-  void Answer(){
-    // wirte your answer
-  
-  }
 };
+
+LinkedList<char>& RemoveDups(LinkedList<char>& list){
+  // wirte your answer
+  return list;
+}
