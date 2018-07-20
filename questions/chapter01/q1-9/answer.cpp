@@ -14,14 +14,14 @@ bool Answer(string s1, string s2){
 
   size_t i = 0;
   size_t start_index = 0, j = 0;
-  bool isRotation = false;
+  bool is_rotation = false;
 
   while (i < len1) {
     if (s1[i] == s2[j]) {
       j = (j == len1 - 1) ? 0 : ++j;
       i++;
       if(i == len1 - 1) {
-        isRotation = true;
+        is_rotation = true;
         break;
       } else {
         continue;
@@ -35,5 +35,5 @@ bool Answer(string s1, string s2){
     }
   }
 
-  return isRotation;
+  return is_rotation;
 }
