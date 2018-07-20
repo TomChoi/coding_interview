@@ -6,18 +6,12 @@ using namespace std;
 
 bool Answer(string s1, string s2){
 
-  // rotation의 조건
-  // 1. 문자의 개수가 일치
   size_t len1 = s1.size();
   size_t len2 = s2.size();
 
   if (len1 != len2)
     return false;
 
-  // 2. 문자의 순서가 일치
-  // 각 문자의 순서가 일치하도록 변경
-  // s1에서 첫 번째 문자의  개수를 센다.
-  // s1에서 첫 번째 문자가 있는 인덱스를 기록한다.
   size_t i = 0;
   size_t start_index = 0, j = 0;
   bool isRotation = false;
