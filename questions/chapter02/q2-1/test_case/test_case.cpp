@@ -4,12 +4,12 @@
 
 TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
   SECTION("int"){
-    LinkedList<int> list;
-    list.appendNode(9);
-    list.appendNode(3);
-    list.appendNode(4);
-    list.appendNode(3);
-    list.appendNode(1);
+    LinkedList<int> input;
+    input.appendNode(9);
+    input.appendNode(3);
+    input.appendNode(4);
+    input.appendNode(3);
+    input.appendNode(1);
 
     LinkedList<int> res;
     res.appendNode(9);
@@ -17,19 +17,19 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
     res.appendNode(4);
     res.appendNode(1);
 
-    list.Answer();
+    input.Answer();
 
-    REQUIRE( list == res );
+    REQUIRE( input == res );
   }
 
   SECTION("float"){
-    LinkedList<float> list;
-    list.appendNode(9.33);
-    list.appendNode(3.123);
-    list.appendNode(4.11);
-    list.appendNode(4.21);
-    list.appendNode(3.123);
-    list.appendNode(2.99);
+    LinkedList<float> input;
+    input.appendNode(9.33);
+    input.appendNode(3.123);
+    input.appendNode(4.11);
+    input.appendNode(4.21);
+    input.appendNode(3.123);
+    input.appendNode(2.99);
 
     LinkedList<float> res;
     res.appendNode(9.33);
@@ -38,57 +38,57 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
     res.appendNode(4.21);
     res.appendNode(2.99);
 
-    list.Answer();
+    input.Answer();
 
-    REQUIRE( list == res );
+    REQUIRE( input == res );
   }
 
   SECTION("char"){
-    LinkedList<float> list;
-    list.appendNode('c');
-    list.appendNode('v');
-    list.appendNode('a');
-    list.appendNode('v');
-    list.appendNode('a');
-    list.appendNode('a');
-    list.appendNode('a');
-    list.appendNode('a');
-    list.appendNode('a');
-    list.appendNode('c');
-    list.appendNode('c');
+    LinkedList<float> input;
+    input.appendNode('c');
+    input.appendNode('v');
+    input.appendNode('a');
+    input.appendNode('v');
+    input.appendNode('a');
+    input.appendNode('a');
+    input.appendNode('a');
+    input.appendNode('a');
+    input.appendNode('a');
+    input.appendNode('c');
+    input.appendNode('c');
 
     LinkedList<float> res;
     res.appendNode('c');
     res.appendNode('a');
     res.appendNode('v');
 
-    list.Answer();
+    input.Answer();
 
-    REQUIRE( list == res );
+    REQUIRE( input == res );
   }
 
   SECTION("mix"){
-    LinkedList<char> list;
-    list.appendNode('a');
-    list.appendNode('a');
-    list.appendNode(4);
-    list.appendNode('a');
-    list.appendNode(32);
-    list.appendNode(23);
-    list.appendNode('a');
-    list.appendNode(4);
-    list.appendNode(4);
-    list.appendNode('1');
-    list.appendNode(4);
-    list.appendNode(23);
-    list.appendNode(' ');
-    list.appendNode('a');
-    list.appendNode(4);
-    list.appendNode('1');
-    list.appendNode(23);
-    list.appendNode('1');
-    list.appendNode('1');
-    list.appendNode('1');
+    LinkedList<char> input;
+    input.appendNode('a');
+    input.appendNode('a');
+    input.appendNode(4);
+    input.appendNode('a');
+    input.appendNode(32);
+    input.appendNode(23);
+    input.appendNode('a');
+    input.appendNode(4);
+    input.appendNode(4);
+    input.appendNode('1');
+    input.appendNode(4);
+    input.appendNode(23);
+    input.appendNode(' ');
+    input.appendNode('a');
+    input.appendNode(4);
+    input.appendNode('1');
+    input.appendNode(23);
+    input.appendNode('1');
+    input.appendNode('1');
+    input.appendNode('1');
 
     LinkedList<char> res;
     res.appendNode('a');
@@ -98,9 +98,9 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
     res.appendNode(4);
     res.appendNode(' ');
 
-    list.Answer();
+    input.Answer();
 
-    REQUIRE( list == res );
+    REQUIRE( input == res );
   }
 
 }

@@ -77,6 +77,6 @@ public:
 
   void Answer(){
     // wirte your answer
-    
+  
   }
 };
