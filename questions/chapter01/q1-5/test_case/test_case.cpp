@@ -15,4 +15,5 @@ TEST_CASE( "Coding unit test", "[Question05]" ) {
     REQUIRE( Answer("Hello Wilson", "HellH Wilson") == true);
     REQUIRE( Answer("Hello Wilson", "HelloWilson") == true);
     REQUIRE( Answer("HelloWilson", "Hello Wilson") == true);
+    REQUIRE( Answer("JoeyCase", "eyC") == false);
 }
