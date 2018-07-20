@@ -7,5 +7,6 @@ TEST_CASE( "Coding unit test", "[Question02]" ) {
     REQUIRE( CheckPermutation("hello", "wilson") == false );
     REQUIRE( CheckPermutation("hello123", "hello321") == true );
     REQUIRE( CheckPermutation("hello", "hello ") == false );
+    REQUIRE( CheckPermutation("hello", "helloo") == false );
     REQUIRE( CheckPermutation("hello wilson", "olelhons ilw") == true );
 }
