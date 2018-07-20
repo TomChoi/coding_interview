@@ -24,14 +24,14 @@ string compress_phrase(string a_phrase)
       the_number_of_continuous_characters++;
       i++;
     } else {
-      a_compressed_phrase.append(1, a_target_character);
+      a_compressed_phrase += to_string(a_target_character);
       a_compressed_phrase += to_string(the_number_of_continuous_characters);
       a_target_character = a_phrase[i];
       the_number_of_continuous_characters = 0;
       continue;
     }
   }
-  a_compressed_phrase.append(1, a_target_character);
+  a_compressed_phrase += to_string(a_target_character);
   a_compressed_phrase += to_string(the_number_of_continuous_characters);
 
   return a_compressed_phrase;
