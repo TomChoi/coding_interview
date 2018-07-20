@@ -74,7 +74,7 @@ public:
   }
 };
 
-LinkedList<char>& Answer(LinkedList<char>& list, int index){
+LinkedList<char>& ReturnKthToLast(LinkedList<char>& list, int index){
   // wirte your answer
   return list;
 }

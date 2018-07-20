@@ -13,7 +13,7 @@ TEST_CASE( "Coding test Chapter02", "[Question02]" ) {
     res.appendNode(3);
     res.appendNode(2);
 
-    REQUIRE( Answer(input, 2) == res);
+    REQUIRE( ReturnKthToLast(input, 2) == res);
   }
 
   SECTION("2"){
@@ -37,7 +37,7 @@ TEST_CASE( "Coding test Chapter02", "[Question02]" ) {
     res.appendNode(3);
     res.appendNode(2);
 
-    REQUIRE( Answer(input, 1) == res);
+    REQUIRE( ReturnKthToLast(input, 1) == res);
   }
 
   SECTION("2"){
@@ -54,6 +54,6 @@ TEST_CASE( "Coding test Chapter02", "[Question02]" ) {
     LinkedList<char> res;
     res.appendNode(2);
 
-    REQUIRE( Answer(input, 8) == res);
+    REQUIRE( ReturnKthToLast(input, 8) == res);
   }
 }
