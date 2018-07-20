@@ -4,14 +4,6 @@ using namespace std;
 // of another. Given two strings, sl and s2, write code to check if s2 is a rotation of sl using only one
 // call to isSubstring (e.g., "waterbottle" is a rotation of"erbottlewat").
 
-
-size_t move_next (size_t index, size_t size) {
-  size_t cursor = index;
-  cursor++;
-  cursor = (cursor % (size - 1) == 0) ? 0 : cursor;
-  return cursor;
-}
-
 bool Answer(string s1, string s2){
 
   // rotation의 조건
@@ -32,8 +24,7 @@ bool Answer(string s1, string s2){
 
   while (i < len1) {
     if (s1[i] == s2[j]) {
-      // j = move_next(j, len1);
-      j++;
+      j = (j == len1 - 1) ? 0 : ++j;
       i++;
       if(i == len1 - 1) {
         isRotation = true;
