@@ -3,5 +3,8 @@
 #include "../answer.cpp"
 
 TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
-
+  SECTION(""){
+    Node<char> node;
+    REQUIRE( Answer(node) == true );
+  }
 }
