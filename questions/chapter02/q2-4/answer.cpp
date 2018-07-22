@@ -11,5 +11,24 @@ using namespace std;
 
 LinkedList<int>& Partition(LinkedList<int>& list, int partition){
 
+  Node<int>* current = list.head;
+  Node<int>* prev = nullptr;
+  int length = list.getLength();
+
+  for( int i=0; i < length; i++ ){
+    if( current->data < partition && prev != nullptr ){
+      Node<int>* target = current;
+
+      current = current->next;
+
+      prev->next = target->next;
+      target->next = list.head;
+      list.head = target;
+    }else{
+      prev = current;
+      current = current->next;
+    }
+  }
+
   return list;
 }
