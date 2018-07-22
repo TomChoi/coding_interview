@@ -2,9 +2,13 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-bool CheckResult(LinkedList<int>& list, int partition, int left){
+bool CheckResult(LinkedList<int>& list, int partition, int len, int left){
   Node<int>* current = list.head;
   int length = list.getLength();
+
+  if( length != len )
+    return false;
+
   for( int i = 1; i <= length; i++ ){
     if( i <= left ){
       if( current->data >= partition ){
@@ -34,15 +38,126 @@ TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
     int partition = 5;
     int left = 3;
 
-    LinkedList<int> res;
-    res.appendNode(3);
-    res.appendNode(1);
-    res.appendNode(2);
-    res.appendNode(10);
-    res.appendNode(5);
-    res.appendNode(5);
-    res.appendNode(8);
+    REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
+  }
 
-    REQUIRE( CheckResult( Partition(input, partition), partition, left) );
+  SECTION("2"){
+    LinkedList<int> input;
+    input.appendNode(3);
+    input.appendNode(5);
+    input.appendNode(8);
+    input.appendNode(5);
+    input.appendNode(10);
+    input.appendNode(2);
+    input.appendNode(1);
+
+    int partition = 10;
+    int left = 6;
+
+    REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
+  }
+
+  SECTION("3"){
+    LinkedList<int> input;
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(3);
+    input.appendNode(10);
+    input.appendNode(3);
+    input.appendNode(25);
+    input.appendNode(11);
+
+    int partition = 11;
+    int left = 5;
+
+    REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
+  }
+
+  SECTION("3"){
+    LinkedList<int> input;
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+    input.appendNode(1);
+
+    int partition = 1;
+    int left = 0;
+
+    REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
+  }
+
+  SECTION("3"){
+    LinkedList<int> input;
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+
+    int partition = 10;
+    int left = 0;
+
+    REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
+  }
+
+  SECTION("3"){
+    LinkedList<int> input;
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(11);
+
+    int partition = 11;
+    int left = 6;
+
+    REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
   }
 }
