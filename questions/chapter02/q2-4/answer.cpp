@@ -30,7 +30,13 @@ public:
   }
 
   ~LinkedList(){
-    // release all node
+    Node<T>* current = head;
+    Node<T>* prev = nullptr;
+    while( current != nullptr ){
+      prev = current;
+      current = current->next;
+      deleteNode(prev);
+    }
   }
 
   bool operator==(const LinkedList& other) const {
@@ -75,6 +81,10 @@ public:
       };
       currentNode->next = newNode;
     }
+  }
+
+  void deleteNode(Node<T>* node){
+    delete node;
   }
 };
 

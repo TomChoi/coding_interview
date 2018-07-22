@@ -72,6 +72,10 @@ public:
       currentNode->next = newNode;
     }
   }
+
+  void deleteNode(Node<T>* node){
+    delete node;
+  }
 };
 
 LinkedList<char>& ReturnKthToLast(LinkedList<char>& list, int index){
