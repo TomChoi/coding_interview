@@ -2,28 +2,22 @@
 #include "catch.hpp"
 #include "../answer.cpp"
 
-bool CheckResult(LinkedList<int>& list, int partition, int left, int right){
+bool CheckResult(LinkedList<int>& list, int partition, int left){
   Node<int>* current = list.head;
-  bool result = false;
-  int l_count = left;
-  int r_count = right;
-  for( int i = 0; i<list.getLength(); i++ ){
-    if( current->data != partition ){
-      if( current->data < partition ){
-        l_count--;
+  int length = list.getLength();
+  for( int i = 1; i <= length; i++ ){
+    if( i <= left ){
+      if( current->data >= partition ){
+        return false;
       }
-      if( current->data > partition && l_count == 0 ){
-        r_count--;
+    }else{
+      if( current->data < partition ){
+        return false;
       }
     }
     current = current->next;
   }
-
-  if( l_count == 0 && r_count == 0 ){
-    result = true;
-  }
-
-  return result;
+  return true;
 }
 
 TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
@@ -39,7 +33,6 @@ TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
 
     int partition = 5;
     int left = 3;
-    int right = 2;
 
     LinkedList<int> res;
     res.appendNode(3);
@@ -50,6 +43,6 @@ TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
     res.appendNode(5);
     res.appendNode(8);
 
-    REQUIRE( CheckResult( Partition(input, partition), partition, left, right) );
+    REQUIRE( CheckResult( Partition(input, partition), partition, left) );
   }
 }
