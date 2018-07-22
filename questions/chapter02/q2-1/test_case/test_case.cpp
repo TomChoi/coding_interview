@@ -36,8 +36,8 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
 
     LinkedList<char> res;
     res.appendNode('c');
-    res.appendNode('a');
     res.appendNode('v');
+    res.appendNode('a');
 
     REQUIRE( RemoveDups(input) == res );
   }
@@ -67,11 +67,10 @@ TEST_CASE( "Coding test Chapter02", "[Question01]" ) {
 
     LinkedList<char> res;
     res.appendNode('a');
-    res.appendNode(32);
-    res.appendNode('1');
-    res.appendNode(23);
     res.appendNode(4);
-    res.appendNode(' ');
+    res.appendNode(32);
+    res.appendNode(23);
+    res.appendNode('1');
 
     REQUIRE( RemoveDups(input) == res );
   }
