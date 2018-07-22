@@ -73,7 +73,7 @@ TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
     REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
   }
 
-  SECTION("3"){
+  SECTION("4"){
     LinkedList<int> input;
     input.appendNode(10);
     input.appendNode(10);
@@ -99,7 +99,7 @@ TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
     REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
   }
 
-  SECTION("3"){
+  SECTION("5"){
     LinkedList<int> input;
     input.appendNode(10);
     input.appendNode(10);
@@ -115,48 +115,49 @@ TEST_CASE( "Coding test Chapter02", "[Question04]" ) {
     REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
   }
 
-  SECTION("3"){
+  SECTION("6"){
     LinkedList<int> input;
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
-    input.appendNode(10);
     input.appendNode(11);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+    input.appendNode(10);
+
 
     int partition = 11;
-    int left = 6;
+    int left = 36;
 
     REQUIRE( CheckResult( Partition(input, partition), partition, input.getLength(), left) );
   }
