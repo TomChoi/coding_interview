@@ -12,6 +12,7 @@ add_compile_options ( ${TARGET_NAME}
 target_include_directories( ${TARGET_NAME}
   PUBLIC
   ${CATCH_INCLUDES}
+  ${LINKEDLIST_INCLUDES}
 )
 
 add_custom_target ( ${TARGET_NAME}_test ALL
