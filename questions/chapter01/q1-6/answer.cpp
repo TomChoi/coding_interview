@@ -25,5 +25,10 @@ string Answer(string s1){
       break;
     }
   }
-  return res;
+
+  if( res.size() >= s1.size() ){
+    return s1;
+  }else{
+    return res;
+  }
 }
