@@ -80,6 +80,18 @@ public:
   void deleteNode(Node<T>* node){
     delete node;
   }
+
+  void printList(){
+    std::cout << "============ LinkedList ===============" << std::endl;
+    Node<T>* current = head;
+    int count = 0;
+    while( current != nullptr ){
+      std::cout << "[ " << count << " ] Data = " << current->data << std::endl;
+      current = current->next;
+      count++;
+    }
+    std::cout << "============    End     ===============" << std::endl;
+  }
 };
 
 #endif
