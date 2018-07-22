@@ -1,15 +1,83 @@
-#include "LinkedList.h"
-
 using namespace std;
 
 // Delete Middle Node: Implement an algorithm to delete a node in the middle
 // (i.e., any node but the  rst and last node, not necessarily the exact middle)
 // of a singly linked list, given only access to that node.
 // EXAMPLE
-// lnput:the node c from the linked lista->b->c->d->e->f
-// Result: nothing is returned, but the new linked list looks likea->b->d->e- >f
+// lnput:the node c from the linked list a->b->c->d->e->f
+// Result: nothing is returned, but the new linked list looks like a->b->d->e- >f
 
-string Answer(string s1, int len){
-  string res;
-  return res;
+template< class T >
+struct Node{
+public:
+  T data;
+  Node* next;
+
+  Node(T d){
+    data = d;
+    next = nullptr;
+  }
+};
+
+template< class T >
+class LinkedList
+{
+public:
+  Node<T>* head;
+
+  LinkedList(){
+    head = nullptr;
+  }
+
+  ~LinkedList(){
+    // release all node
+  }
+
+  bool operator==(const LinkedList& other) const {
+    Node<T>* l_node = head;
+    Node<T>* r_node = other.head;
+
+    if( getLength() != other.getLength() ){
+      return false;
+    }
+
+    for( int i=0; i< getLength(); i++ ){
+      if( l_node->data != r_node->data ){
+        return false;
+      }
+      l_node = l_node->next;
+      r_node = r_node->next;
+    }
+    return true;
+  }
+
+  int getLength() const {
+    int count = 0;
+    if( head != nullptr ){
+      count = 1;
+      Node<T>* currentNode = head;
+      while( currentNode->next != nullptr){
+        currentNode = currentNode->next;
+        count++;
+      }
+    }
+    return count;
+  }
+
+  void appendNode(T data){
+    if( head == nullptr){
+      head = new Node<T>(data);
+    }else{
+      Node<T>* newNode = new Node<T>(data);
+      Node<T>* currentNode = head;
+      while( currentNode->next != nullptr ){
+        currentNode = currentNode->next;
+      };
+      currentNode->next = newNode;
+    }
+  }
+};
+
+LinkedList<char>& DeleteMiddleNode(LinkedList<char>& list){
+  return list;
 }
