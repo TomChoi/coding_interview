@@ -90,5 +90,18 @@ public:
 
 LinkedList<char>& DeleteMiddleNode(LinkedList<char>& list){
 
-  return list;
+  int MINIMUM_COUNT_FOR_GET_MIDDLE = 3;
+  Node<char>* current = list.head;
+  int list_length = list.getLength();
+  if( list_length >= MINIMUM_COUNT_FOR_GET_MIDDLE ){
+
+    int middle = (list_length % 2) == 0 ? list_length / 2 : (list_length / 2) +1;
+    for(int i=1; i < middle - 1; i++){
+      current = current->next;
+    }
+    current->next = current->next->next;
+    return list;
+  }else{
+    return list;
+  }
 }
