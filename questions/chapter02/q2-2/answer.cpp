@@ -76,5 +76,14 @@ public:
 
 LinkedList<char>& ReturnKthToLast(LinkedList<char>& list, int index){
   // wirte your answer
-  return list;
+  LinkedList<char>* answer = new LinkedList<char>();
+  Node<char>* current = list.head;
+  int length = list.getLength();
+  for( int i=1; i < length + 1; i++){
+    if( i >= index ){
+      answer->appendNode(current->data);
+    }
+    current = current->next;
+  }
+  return *answer;
 }
