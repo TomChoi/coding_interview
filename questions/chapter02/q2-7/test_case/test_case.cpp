@@ -7,10 +7,23 @@
 TEST_CASE( "Coding test Chapter02", "[Question07]" ) {
 
   SECTION("1"){
-    LinkedList<int> input;
+    LinkedList<int> input1;
+    LinkedList<int> input2;
 
-    unique_ptr<Node<int>> a(new Node<int>(1));
+    Node<int>* newNode = new Node<int>(1);
+    Node<int>* copyNode = newNode;
+    unique_ptr<Node<int>> a(newNode);
+    // unique_ptr<Node<int>> b(copyNode);
 
-    input.appendExternNode(move(a));
+    // input1.appendExternNode(move(a));
+    // input2.appendExternNode(move(b));
+    //
+    // input1.printList();
+    // input2.printList();
+    //
+    // input1.head->data = 5;
+    //
+    // input1.printList();
+    // input2.printList();
   }
 }

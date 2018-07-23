@@ -78,7 +78,16 @@ public:
   }
 
   void appendExternNode(std::unique_ptr< Node<T> > externNode){
-    std::cout << "get extern node : " << externNode->data << std::endl;
+    Node<T>* extern_ptr = externNode.release();
+    if( head == nullptr ){
+      head = extern_ptr;
+    }else{
+      Node<T>* current = head;
+      while( current->next != nullptr ){
+        current = current->next;
+      }
+      current->next = extern_ptr;
+    }
   }
 
   void deleteNode(Node<T>* node){

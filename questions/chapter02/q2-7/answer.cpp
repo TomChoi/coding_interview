@@ -8,7 +8,7 @@ using namespace std;
 // That is, if the kth node of the first linked list is the exact same node (by reference)
 // as the jth node of the second linked list, then they are intersecting.
 
-Node<int>* Intersection(LinkedList<int>& list){
+Node<int>* Intersection(LinkedList<int>& list1, LinkedList<int>& list2){
 
-  return list.head;
+  return list1.head;
 }
