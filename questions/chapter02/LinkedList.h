@@ -77,6 +77,10 @@ public:
     }
   }
 
+  void appendExternNode(std::unique_ptr< Node<T> > externNode){
+    std::cout << "get extern node : " << externNode->data << std::endl;
+  }
+
   void deleteNode(Node<T>* node){
     delete node;
   }
