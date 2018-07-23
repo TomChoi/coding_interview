@@ -1,5 +1,9 @@
 project( chapter_02 )
 
+get_filename_component ( LINKEDLIST_HEADER_PATH "./" ABSOLUTE )
+
+set ( LINKEDLIST_INCLUDES ${LINKEDLIST_HEADER_PATH} )
+
 set ( TARGET_NAME "q2-1" )
 add_subdirectory ( ${TARGET_NAME} )
 

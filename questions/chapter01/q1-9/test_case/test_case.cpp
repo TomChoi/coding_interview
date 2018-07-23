@@ -4,6 +4,7 @@
 
 TEST_CASE( "Coding unit test", "[Question09]" ) {
     REQUIRE( Answer("waterbottle", "erbottlewat") == true );
+    REQUIRE( Answer("waterbwottle", "erbwottlewat") == true );
     REQUIRE( Answer("Hello Wilson", "sonHello Wil") == true );
     REQUIRE( Answer("Hello Wilson", "sonHelloWil") == false );
 }
