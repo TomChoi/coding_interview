@@ -13,5 +13,40 @@ using namespace std;
 
 LinkedList<int>& SumLists(LinkedList<int>& l1, LinkedList<int>& l2){
 
-  return list;
+  LinkedList<int>* res = new LinkedList<int>();
+
+  Node<int>* l1_current = l1.head;
+  Node<int>* l2_current = l2.head;
+
+  int bigger_size = l1.getLength() < l2.getLength() ? l2.getLength() : l1.getLength();
+
+  int carry = 0;
+
+  for( int i=0; i < bigger_size; ++i ){
+
+    int sum = 0;
+    if( l1_current != nullptr ){
+      sum += l1_current->data;
+    }
+    if( l2_current != nullptr ){
+      sum += l2_current->data;
+    }
+
+    sum += carry;
+    res->appendNode( sum % 10 );
+    carry = sum / 10;
+
+    if( l1_current != nullptr ){
+      l1_current = l1_current->next;
+    }
+    if( l2_current != nullptr ){
+      l2_current = l2_current->next;
+    }
+  }
+
+  if( carry == 1 ){
+    res->appendNode(carry);
+  }
+  
+  return *res;
 }
