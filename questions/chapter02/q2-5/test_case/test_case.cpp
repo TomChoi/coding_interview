@@ -79,4 +79,30 @@ TEST_CASE( "Coding test Chapter02", "[Question05]" ) {
 
     REQUIRE( SumLists(input1, input2) == answer);
   }
+  
+  SECTION("4"){
+    LinkedList<int> input1;
+    input1.appendNode(8);
+    input1.appendNode(6);
+    input1.appendNode(8);
+    input1.appendNode(9);
+    input1.appendNode(9);
+
+    LinkedList<int> input2;
+    input2.appendNode(9);
+    input2.appendNode(9);
+    input2.appendNode(8);
+    input2.appendNode(7);
+    input2.appendNode(8);
+
+    LinkedList<int> answer;
+    answer.appendNode(7);
+    answer.appendNode(6);
+    answer.appendNode(7);
+    answer.appendNode(7);
+    answer.appendNode(8);
+    answer.appendNode(1);
+
+    REQUIRE( SumLists(input1, input2) == answer);
+  }
 }
