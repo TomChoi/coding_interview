@@ -9,6 +9,20 @@ using namespace std;
 // as the jth node of the second linked list, then they are intersecting.
 
 Node<int>* Intersection(LinkedList<int>& list1, LinkedList<int>& list2){
+  int l1_size = list1.getLength();
+  int l2_size = list2.getLength();
 
-  return list1.head;
+  Node<int>* l1_current = list1.head;
+  
+  for( int i=0; i < l1_size; ++i ){
+    Node<int>* l2_current = list2.head;
+    for( int j=0; j < l2_size; ++j ){
+      if( l1_current == l2_current ){
+        return l1_current;
+      }
+      l2_current = l2_current->next;
+    }
+    l1_current = l1_current->next;
+  }
+  return nullptr;
 }
