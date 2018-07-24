@@ -9,14 +9,25 @@ bool Palindrome(LinkedList<char>& list){
   map<char, bool> palindrome_check_flag;
 
   Node<char>* current = list.head;
+  Node<char>* prev = nullptr;
+
+  while( current != nullptr ){
+    if( current->data == ' ' ){
+      if( prev == nullptr ){
+        current = current->next;
+      }else{
+        prev->next = current->next;
+      }
+    }
+    prev = current;
+    current = current->next;
+  }
+  current = list.head;
 
   int size = list.getLength();
-  char middle_first = 0;
-  int space_count = 0;
+  int middle = size % 2 == 1 ? size / 2 : -1;
   for( int i=0; i < size; ++i ){
-    if( current->data == ' ' ){
-      space_count++;
-    }else {
+    if( i != middle ){
       auto iter = palindrome_check_flag.find(current->data);
       if( iter == palindrome_check_flag.end() ){
         palindrome_check_flag[ current->data ] = true;
