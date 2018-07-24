@@ -24,13 +24,13 @@ public:
   }
 
   ~LinkedList(){
-    Node<T>* current = head;
-    Node<T>* prev = nullptr;
-    while( current != nullptr ){
-      prev = current;
-      current = current->next;
-      deleteNode(prev);
-    }
+    // Node<T>* current = head;
+    // Node<T>* prev = nullptr;
+    // while( current != nullptr ){
+    //   prev = current;
+    //   current = current->next;
+    //   deleteNode(prev);
+    // }
   }
 
   bool operator==(const LinkedList& other) const {
@@ -77,16 +77,15 @@ public:
     }
   }
 
-  void appendExternNode(std::unique_ptr< Node<T> > externNode){
-    Node<T>* extern_ptr = externNode.release();
+  void appendExternNode(Node<T>* externNode){
     if( head == nullptr ){
-      head = extern_ptr;
+      head = externNode;
     }else{
       Node<T>* current = head;
       while( current->next != nullptr ){
         current = current->next;
       }
-      current->next = extern_ptr;
+      current->next = externNode;
     }
   }
 
