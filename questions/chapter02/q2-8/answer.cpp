@@ -10,7 +10,7 @@ using namespace std;
 // Input: A -> B -> C -> D -> E -> C[thesameCasearlier]
 // Output: C
 
-bool Answer(string s1){
+Node<char>* LoopDetection(LinkedList<char>& list){
 
-  return true;
+  return list.head;
 }

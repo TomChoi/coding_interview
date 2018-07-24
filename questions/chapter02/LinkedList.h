@@ -24,13 +24,13 @@ public:
   }
 
   ~LinkedList(){
-    Node<T>* current = head;
-    Node<T>* prev = nullptr;
-    while( current != nullptr ){
-      prev = current;
-      current = current->next;
-      deleteNode(prev);
-    }
+    // Node<T>* current = head;
+    // Node<T>* prev = nullptr;
+    // while( current != nullptr ){
+    //   prev = current;
+    //   current = current->next;
+    //   deleteNode(prev);
+    // }
   }
 
   bool operator==(const LinkedList& other) const {
@@ -74,6 +74,18 @@ public:
         currentNode = currentNode->next;
       };
       currentNode->next = newNode;
+    }
+  }
+
+  void appendExternNode(Node<T>* externNode){
+    if( head == nullptr ){
+      head = externNode;
+    }else{
+      Node<T>* current = head;
+      while( current->next != nullptr ){
+        current = current->next;
+      }
+      current->next = externNode;
     }
   }
 
