@@ -13,5 +13,31 @@ using namespace std;
 
 LinkedList<int>& SumLists(LinkedList<int>& l1, LinkedList<int>& l2){
 
-  return list;
+  Node<int>* head_l1 = l1.head;
+  Node<int>* head_l2 = l2.head;
+
+  LinkedList<int> result;
+
+  Node<int>* curr_l1 = head_l1;
+  Node<int>* curr_l2 = head_l2;
+
+  Node<int>* next_l1 = curr_l1->next;
+  Node<int>* next_l2 = curr_l2->next;
+
+  int carry = 0;
+  while (curr_l1 != nullptr) {
+    int sum = curr_l1->data + curr_l2->data + carry;
+    carry = 0;
+    if (sum >= 10) {
+      carry++;
+      int digit = sum % 10;
+      result.appendNode(digit);
+    }
+    curr_l1 = next_l1;
+    curr_l2 = next_l2;
+
+    next_l1 = curr_l1->next;
+    next_l2 = curr_l2->next;
+  }
+  return result;
 }
