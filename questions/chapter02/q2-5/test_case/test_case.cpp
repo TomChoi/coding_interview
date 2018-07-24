@@ -79,7 +79,7 @@ TEST_CASE( "Coding test Chapter02", "[Question05]" ) {
 
     REQUIRE( SumLists(input1, input2) == answer);
   }
-  
+
   SECTION("4"){
     LinkedList<int> input1;
     input1.appendNode(8);
