@@ -63,6 +63,19 @@ TEST_CASE( "Coding test Chapter02", "[Question03]" ) {
     REQUIRE( DeleteMiddleNode(input) == res );
   }
 
+  SECTION("4"){
+    LinkedList<char> input;
+    input.appendNode('a');
+    input.appendNode('b');
+    input.appendNode('c');
+
+    LinkedList<char> res;
+    res.appendNode('a');
+    res.appendNode('c');
+
+    REQUIRE( DeleteMiddleNode(input) == res );
+  }
+
   SECTION("5"){
     LinkedList<char> input;
     input.appendNode('1');
