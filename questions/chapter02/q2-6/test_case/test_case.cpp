@@ -45,8 +45,9 @@ TEST_CASE( "Coding test Chapter02", "[Question06]" ) {
     for( int i=0; i < 1001; i++){
       if( 1001 / 2 == i ){
         input.appendNode('b');
+      }else{
+        input.appendNode('a');
       }
-      input.appendNode('a');
     }
 
     REQUIRE( Palindrome(input) == true );
@@ -54,12 +55,13 @@ TEST_CASE( "Coding test Chapter02", "[Question06]" ) {
 
   SECTION("5"){
     LinkedList<char> input;
-
-    for( int i=0; i < 1001; i++){
-      if( 1001 / 2 == i || (1001 / 2) + 1 == i){
+    int num = 1001;
+    for( int i=0; i < num; i++){
+      if( num / 2 == i || (num / 2) + 1 == i){
         input.appendNode('b');
+      }else{
+        input.appendNode('a');
       }
-      input.appendNode('a');
     }
 
     REQUIRE( Palindrome(input) == false );
