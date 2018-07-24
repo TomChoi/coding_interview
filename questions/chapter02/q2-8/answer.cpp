@@ -12,5 +12,16 @@ using namespace std;
 
 Node<char>* LoopDetection(LinkedList<char>& list){
 
-  return list.head;
+  map< Node<char>*, char> node_map;
+  Node<char>* current = list.head;
+
+  while(1){
+    if( node_map.find(current) != node_map.end() ){
+      return current;
+    }else{
+      node_map[ current ] = 1;
+    }
+    current = current->next;
+  }
+  return nullptr;
 }
