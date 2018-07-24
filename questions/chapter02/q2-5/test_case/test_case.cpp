@@ -68,14 +68,14 @@ TEST_CASE( "Coding test Chapter02", "[Question05]" ) {
 
 
     LinkedList<int> answer;
-    input2.appendNode(1);
-    input2.appendNode(3);
-    input2.appendNode(3);
-    input2.appendNode(7);
-    input2.appendNode(3);
-    input2.appendNode(3);
-    input2.appendNode(3);
-    input2.appendNode(3);
+    answer.appendNode(1);
+    answer.appendNode(3);
+    answer.appendNode(3);
+    answer.appendNode(7);
+    answer.appendNode(3);
+    answer.appendNode(3);
+    answer.appendNode(3);
+    answer.appendNode(3);
 
     REQUIRE( SumLists(input1, input2) == answer);
   }
