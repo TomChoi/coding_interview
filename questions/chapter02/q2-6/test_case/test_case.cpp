@@ -63,7 +63,6 @@ TEST_CASE( "Coding test Chapter02", "[Question06]" ) {
         input.appendNode('a');
       }
     }
-    input.printList();
 
     REQUIRE( Palindrome(input) == false );
   }
