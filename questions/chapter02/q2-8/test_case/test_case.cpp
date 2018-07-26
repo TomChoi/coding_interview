@@ -19,7 +19,7 @@ TEST_CASE( "Coding test Chapter02", "[Question08]" ) {
       last_node = last_node->next;
     }
     last_node->next = newNode;
-    input.printList();
+    
     REQUIRE( LoopDetection( input ) == newNode );
   }
 
